@@ -1,0 +1,219 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{unicode-math} %custom math font
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{array}
+
+% Page setup
+\geometry{
+    top=1in,
+    bottom=1in,
+    left=1in,
+    right=1in
+}
+
+% Colors
+\definecolor{darkblue}{RGB}{25,25,112}
+\definecolor{gray}{RGB}{100,100,100}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    urlcolor=darkblue,
+    citecolor=darkblue,
+    pdfborder={0 0 0}
+}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+%\cfoot{\textcolor{black}{\small Page \thepage\ of \pageref{LastPage}}}
+
+% Section formatting
+\titleformat{\section}[hang]{\large\bfseries\color{darkblue}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+\titleformat{\subsection}[hang]{\normalsize\bfseries}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{8pt}{4pt}
+
+% Custom commands
+\newcommand{\cvitem}[2]{\item \textbf{#1} #2}
+\newcommand{\cventry}[5]{%
+    \item \textbf{#1} \hfill \textbf{#2} \\
+    \textit{#3} \hfill #4 \\
+    #5 % add slash here and six between square brackets to space better (or space in another way with vspace
+}
+
+% Remove paragraph indentation
+\setlength{\parindent}{0pt}
+
+% Font
+\setmainfont{Georgia}
+\setmathfont{Cambria Math}
+\setmonofont{Cascadia Code Semi Light}
+
+
+\begin{document}
+
+% Header with name and contact information
+\begin{center}
+    {\LARGE \textbf{Matteo Poli}} \\[0.5em]
+    \textcolor{gray}{
+        Email: \href{mailto:matteo.poli@studenti.luiss.it}{matteo.poli@phd.unibocconi.it} $\cdot$ 
+        Phone: +39 348 9947908 $\cdot$ 
+        %Website: \href{https://yourwebsite.com}{yourwebsite.com} \\
+        Address: Via Emilia San Pietro 40, Reggio Emilia, 42121, Italy
+    }
+\end{center}
+
+\vspace{0.5em}
+
+% Education Section
+\section{Education}
+
+\begin{itemize}[leftmargin=0em, itemsep=0.5em]
+	\cventry{Ph.D. in Economics}{2026 ->   \texttt{\char32}\texttt{\char32}\texttt{\char32} }{Bocconi University}{}{}
+		%\textit{GPA: 29.6/30} %\\
+		% Relevant Coursework: Advanced Macroeconomics (Phd Level), Mathematical Statistics, Econometric Theory %\\
+		%Thesis: ``Nonlinearities in the credit channel of monetary policy'' (Advisor: Josè Luis Peydro, EIEF)
+		
+
+    \cventry{Rome Master in Economics, \textit{cum laude}}{2024 - 2026}{Einaudi Institute for Economics and Finance \& LUISS}{}{
+        \textit{GPA: 29.7/30} %\\
+       % Relevant Coursework: Advanced Macroeconomics (Phd Level), Mathematical Statistics, Econometric Theory %\\
+        %Thesis: ``Nonlinearities in the credit channel of monetary policy'' (Advisor: Josè Luis Peydro, EIEF)
+        
+    } %there's a sixth space missing
+    
+    \cventry{B. A. in Economics, Markets and Institutions, \textit{cum laude}}{2021 - 2024}{University of Bologna}{}{
+        \textit{GPA: 29.1/30} %grade here just in case or courses
+    }
+\end{itemize}
+
+% Research Experience Section
+\section{Work Experience}
+
+\begin{itemize}[leftmargin=0em, itemsep=0.5em]
+%    \cventry{Master's Thesis}{September 2025 -- June 2026}{Josè Luis Peydrò, EIEF}{}{
+%	Project: ``Nonlinearities in the credit channel of monetary policy' \\
+%	$\cdot$ Extending the analysis in Ciccarelli et al. (2015) to detect an asymmetric response of the credit channel to expansionary and contractionary monetary policy shocks
+%    }{}
+	
+    \cventry{Research Assistant}{2025}{Einaudi Institute for Economics and Finance}{}{
+    	Assisted Andrea Pozzi with research in Industrial Organization and Finance
+        %Project: ``Research Project Title'' \\
+%        $\cdot$ Web-scraped and organized data on public procurement using Python\\
+%        $\cdot$ Matched and merged different financial datasets, computed yields to maturity and implemented a method to retain bonds with incomplete information\\
+    }{}
+\end{itemize}
+
+\section{Other Activities}
+\begin{itemize}[leftmargin=0em, itemsep=0.5em]
+\cventry{Committee President}{2021-2024}{MEP Italia}{}{Organized Model European Parliament sessions in universities and high schools}
+\end{itemize}
+
+
+
+% Working Papers and Publications Section
+%\section{Research Papers}
+%
+%\subsection{Working Papers}
+%\begin{itemize}[leftmargin=0em, itemsep=0.3em]
+%    \item ``Title of Your Working Paper'' (with Co-author Name), 2024. \\
+%    \textit{Under review at Journal of Economic Theory.} \\
+%    Available at: \href{https://yourwebsite.com/paper1.pdf}{yourwebsite.com/paper1.pdf}
+%    
+%    \item ``Title of Another Working Paper'', 2024. \\
+%    \textit{Job Market Paper.} \\
+%    Available at: \href{https://yourwebsite.com/jmp.pdf}{yourwebsite.com/jmp.pdf}
+%\end{itemize}
+%
+%\subsection{Publications}
+%\begin{itemize}[leftmargin=0em, itemsep=0.3em]
+%    \item Co-author, A. and Your Name (2023). ``Published Paper Title.'' \textit{Journal Name}, 45(2), 123-145.
+%\end{itemize}
+%
+%% Conference Presentations Section
+%\section{Conference Presentations}
+%
+%\begin{itemize}[leftmargin=0em, itemsep=0.3em]
+%    \cvitem{Paper Title'}{ American Economic Association Annual Meeting, New Orleans, LA, January 2024}
+%    \item ``Paper Title,'' Midwest Economics Association Conference, Chicago, IL, March 2024
+%    \item ``Paper Title,'' Graduate Student Conference, University Name, April 2023
+%\end{itemize}
+
+
+% Honors and Awards Section
+%\section{Honors and Awards}
+%
+%\begin{itemize}[leftmargin=0em, itemsep=0.3em]
+%    \item Graduate Fellowship, University Name, 2023-2025 (\$25,000/year)
+%\end{itemize}
+
+% Professional Experience Section
+
+
+% Skills Section
+\section{Technical Skills}
+
+\begin{itemize}[leftmargin=0em]
+    \item \textbf{Programming:} R 
+    %(contributed a function to the \textit{mFilter} package)
+    , Python, MATLAB, Stata
+    \item \textbf{Other Software:} LaTeX, Microsoft Office suite, Excel
+\end{itemize}
+
+\section{Languages}
+\begin{itemize}[leftmargin=0em]
+	\item \textbf{Italian:} Native
+	\item \textbf{English:} Fluent (C2 2021, IELTS 8 2025)
+	\item \textbf{French:} Basic (moderate reading and listening)
+\end{itemize}
+
+% References Section
+%\section{References}
+%
+%\begin{minipage}[t]{0.48\textwidth}
+%    \textbf{Josè Luis Peydro} \\
+%    Professor of Economics and Finance, LUISS \\
+%    Fellow at EIEF \\
+%    Via Sallustiana 67 \\
+%    Rome, Italy \\
+%    Phone: +1 (123) 456-7890 \\
+%    Email: \href{mailto:reference1@university.edu}{reference1@university.edu}
+%\end{minipage}
+%\hfill
+%\begin{minipage}[t]{0.48\textwidth}
+%    \textbf{Andrea Pozzi} \\
+%    Associate Professor of Economics \\
+%    Einaudi Institute for Economics and Finance \\
+%    Via Sallustiana 67 \\
+%    Rome, Italy\\
+%    Phone: +1 (123) 456-7891 \\
+%    Email: \href{mailto:reference2@university.edu}{reference2@university.edu}
+%\end{minipage}
+%
+%\vspace{1em}
+%
+%\begin{minipage}[t]{0.48\textwidth}
+%    \textbf{Liangjie Wu} \\
+%    Associate Professor of Economics \\
+%    Einaudi Institute for Economics and Finance \\
+%    Via Sallustiana 67 \\
+%    Rome, Italy\\
+%    Phone: +1 (123) 456-7891 \\
+%    Email: \href{mailto:reference2@university.edu}{reference2@university.edu}
+%\end{minipage}
+
+\end{document}
