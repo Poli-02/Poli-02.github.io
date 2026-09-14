@@ -17,7 +17,7 @@ Education
 
 Work experience
 ======
-* Summer 2024: Research Assistant
+* Summer 2025: Research Assistant
   * Einaudi Institute for Economics and Finance
   * Supervisor: Andrea Pozzi
 
